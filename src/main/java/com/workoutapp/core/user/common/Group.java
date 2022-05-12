@@ -41,5 +41,10 @@ public class Group {
         return groupMembers;
     }
 
+    public ArrayList<User> removeMember(ArrayList<User> groupMembers, User remove) {
+        groupMembers.removeIf(a -> a.equals(remove));
+        return groupMembers;
+    }
+
 
 }
