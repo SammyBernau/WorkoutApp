@@ -7,36 +7,67 @@ import com.workoutapp.core.user.common.Workout;
 import java.util.ArrayList;
 
 public class User {
-    private final int userId;
-    private final Profile profile;
-    private final ArrayList<Group> group;
-    private final ArrayList<Workout> workout;
+    private String email;
+    private String password;
+    private int age;
+    private double height;
+    private double weight;
 
 
+    //if(User.registered) do first constructor else do second
 
-
-    public User(int userId, Profile profile,ArrayList<Group> group, ArrayList<Workout> workout){
-        this.userId = userId;
-        this.profile = profile;
-        this.group = group;
-        this.workout = workout;
+    public User(String email){
+        //check if the user exists
     }
 
-    public int getUserId() {
-        return userId;
+
+    public User(String email, String password, int age, double height, double weight) {
+        this.email = email;
+        this.password = password;
+        this.age = age;
+        this.height = height;
+        this.weight = weight;
     }
 
-    public Profile getProfile(){
-        return profile;
+
+    public String getEmail(){
+        return email;
     }
 
-    public ArrayList<Group> getGroup(){
-        return group;
+    public void setNewEmail(String newEmail){
+        email = newEmail;
     }
 
-    public ArrayList<Workout> getWorkout(){
-        return workout;
+
+    public String getPassword(){
+        return password;
     }
+    public void setPassword(String newPassword){
+        password = newPassword;
+    }
+
+    public void setAge(int newAge) {
+        age = newAge;
+    }
+
+    public double getHeight(){
+        return height;
+    }
+
+    public void setHeight(double newHeight){
+        height=newHeight;
+    }
+
+    public double getWeight(){
+        return weight;
+    }
+
+    public void setWeight(double newWeight){
+        weight=newWeight;
+    }
+
+
+
 
 
 }
