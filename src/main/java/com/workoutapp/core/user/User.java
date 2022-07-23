@@ -1,9 +1,12 @@
 package com.workoutapp.core.user;
 
 import com.workoutapp.core.user.common.Group;
-import com.workoutapp.core.user.common.Profile;
 import com.workoutapp.core.user.common.Workout;
+import com.workoutapp.core.user.database.util.Query;
+import org.w3c.dom.ls.LSOutput;
 
+import java.net.Inet4Address;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 
 public class User {
@@ -13,13 +16,20 @@ public class User {
     private double height;
     private double weight;
 
-
-    //if(User.registered) do first constructor else do second
-
-    public User(String email){
-        //check if the user exists
+    public static void main(String[] args) {
+        userExists("Sambernau04@gmail.com");
     }
 
+
+    public static void userExists(String email) {
+        boolean query = Query.build()
+                .select("users")
+                .where("email", email)
+                .executeExists();
+        if (query) {
+            System.out.println("User with " + email + " already exists");
+        }
+    }
 
     public User(String email, String password, int age, double height, double weight) {
         this.email = email;
@@ -37,7 +47,6 @@ public class User {
     public void setNewEmail(String newEmail){
         email = newEmail;
     }
-
 
     public String getPassword(){
         return password;
