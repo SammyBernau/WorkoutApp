@@ -22,10 +22,6 @@ public class Database {
             String lastName = query1.getString(2);
             System.out.println("last names of all users =  " + lastName);
         } */
-
-        ResultSet query = Query.build()
-                .insert("users", 1,"Bernau","Sam", "Sambernau04@gmail.com", 21, 74, 194)
-                .execute();
     }//End main
 
     public static Database getInstance() {
