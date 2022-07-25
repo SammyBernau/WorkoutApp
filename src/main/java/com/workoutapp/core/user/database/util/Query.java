@@ -54,7 +54,6 @@ public class Query {
         return Database.getInstance().execute(query);
     }
 
-
     public boolean executeExists() {
         ResultSet result = execute();
         try {

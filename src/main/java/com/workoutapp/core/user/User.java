@@ -4,7 +4,6 @@ import com.workoutapp.core.user.database.util.Query;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Scanner;
 
 public class User {
 

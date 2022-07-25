@@ -12,17 +12,9 @@ public class Database {
     private final String DATABASE_USERNAME = "root";
     private final String DATABASE_PASSWORD = "password";
 
-    public static void main(String[] args) throws SQLException {
-        //Example of correct java build syntax
-        /* ResultSet query1 = Query.build()
-                .select("users")
-                .execute();
-        //Example of correct printing of query (prints all users lastnames
-        while (query1.next()) {
-            String lastName = query1.getString(2);
-            System.out.println("last names of all users =  " + lastName);
-        } */
-    }//End main
+    public static void main(String[] args) {
+
+    }//End of main
 
     public static Database getInstance() {
         if (instance == null) {
