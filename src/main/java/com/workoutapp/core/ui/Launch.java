@@ -1,4 +1,4 @@
-package com.workoutapp.core;
+package com.workoutapp.core.ui;
 
 import com.workoutapp.core.user.User;
 

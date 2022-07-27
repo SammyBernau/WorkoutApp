@@ -1,4 +1,4 @@
-package com.workoutapp.core;
+package com.workoutapp.core.ui;
 
 public class AppController {
 
