@@ -4,7 +4,7 @@ import static com.workoutapp.core.user.common.MuscleGroup.TRICEPS;
 
 public class Exercise {
 
-gi
+
     public static void main(String[] args) {
         Exercise exercise1 = new ExerciseBuilder("Tricep Pushdown",TRICEPS)
                 .reps(8)
