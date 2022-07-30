@@ -2,6 +2,7 @@ package com.workoutapp.core.user;
 
 import com.workoutapp.core.user.database.util.Query;
 
+import java.net.PasswordAuthentication;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -10,7 +11,13 @@ public class User {
     //TODO: Create javafx framework to allow input into createUser method. Due Date: 6/26
 
     public static void main(String[] args) throws SQLException {
-        printUsers();
+        String user1= "sambernau04@gmail.com";
+        String pass1 = "Spyro320!";
+        char[] passArray1 = pass1.toCharArray();
+        PasswordAuthentication passwordAuthentication1 = new PasswordAuthentication(user1, passArray1);
+        System.out.println("Password: " + passwordAuthentication1.getPassword());
+
+
     }
 
     public static boolean userExists(String tableName, String email) {
@@ -56,6 +63,13 @@ public class User {
                     ", height = " + height + ", weight = " + weight );
         }
     }
+
+
+
+
+
+
+
 
 
 
